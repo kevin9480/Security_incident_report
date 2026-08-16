@@ -4,7 +4,7 @@
 
 DMZ 웹 서버의 실제 취약점(React2Shell, CVE-2025-55182)을 직접 재현해 침투 → 내부 DB 변조 → 사용자 PC 감염 → WinRM 기반 내부 확산 → 랜섬웨어 실행까지 이어지는 침해 시나리오를 구축하고, Wazuh/Sysmon/Coraza WAF 로그를 기반으로 침해사고를 분석·대응한 프로젝트입니다.
 
-이 저장소는 공격 대상이 된 시스템 코드와, 그 코드를 분석·대응한 산출물(인프라 구성, 공격 시나리오, 침해사고 분석 보고서, 대응 방안, 발표자료)을 한 곳에 모은 저장소입니다.
+이 저장소는 공격 대상이 된 시스템 코드와, 그 코드를 분석·대응한 산출물(인프라 구성, 공격 시나리오, 침해사고 분석 보고서, 대응 방안)을 한 곳에 모은 저장소입니다.
 
 - [apps/external-web](apps/external-web) — DMZ 취약 웹 애플리케이션 (React2Shell 취약점 포함, 원본 `dev` 브랜치 기준)
 - [apps/internal-portal](apps/internal-portal) — 내부 직원 게시판
@@ -20,8 +20,6 @@ DMZ 웹 서버의 실제 취약점(React2Shell, CVE-2025-55182)을 직접 재현
 | [docs/03-incident-report](docs/03-incident-report/README.md) | 침해사고 원인 분석 및 대응 방안 보고서 (원본 PDF 포함) |
 | [docs/04-response](docs/04-response/README.md) | 대응 방안 및 반영 전/후 검증 결과 |
 | [docs/05-ioc/ioc.md](docs/05-ioc/ioc.md) | 침해 지표(IOC) — IP, 파일 경로, 해시, 탐지 로그 |
-| [evidence](evidence/) | Wazuh/Coraza/MongoDB 로그 원본 캡처 |
-| [slides](slides/) | 발표 PPT, 시연 영상 |
 
 > `apps/` 안의 코드는 원본 팀 저장소(`dfir-lab-project/external-web`, `dfir-lab-project/internal-portal`)의 스냅샷입니다. 커밋 히스토리는 포함하지 않았고, 최신 코드 상태만 들어있습니다.
 

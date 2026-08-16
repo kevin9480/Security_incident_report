@@ -21,7 +21,7 @@ DMZ 웹 서버의 실제 취약점(React2Shell, CVE-2025-55182)을 직접 재현
 | [docs/04-response](docs/04-response/README.md) | 대응 방안 및 반영 전/후 검증 결과 |
 | [docs/05-ioc/ioc.md](docs/05-ioc/ioc.md) | 침해 지표(IOC) — IP, 파일 경로, 해시, 탐지 로그 |
 
-> `apps/` 안의 코드는 원본 팀 저장소(`dfir-lab-project/external-web`, `dfir-lab-project/internal-portal`)의 스냅샷입니다. 커밋 히스토리는 포함하지 않았고, 최신 코드 상태만 들어있습니다.
+> 이 저장소 자체가 원본 팀 작업 저장소(비공개)의 산출물을 포트폴리오 공개용으로 새로 정리해 올린 스냅샷입니다. `apps/` 코드는 원본 팀 저장소(`dfir-lab-project/external-web`, `dfir-lab-project/internal-portal`)의 스냅샷이며, 문서(`docs/`)도 실제 작업 과정을 그대로 커밋하지 않고 완성된 상태로 정리해 올렸습니다. 그래서 커밋 수가 적고, 실제 작업 히스토리는 원본 저장소에 있습니다.
 
 ## 기술 스택
 

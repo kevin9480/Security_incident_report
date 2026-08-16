@@ -1,0 +1,37 @@
+# 실행 파일 / 악성코드 페이로드 관련 (오남용 방지)
+# 이 저장소는 분석 문서·탐지 지표만 공개하고, 실제로 동작하는 공격 스크립트나
+# 악성코드 바이너리는 올리지 않는 것을 원칙으로 합니다. (docs/02-attack-scenario/README.md 참고)
+*.exe
+*.dll
+*.scr
+*.bat
+*.cmd
+*.lnk
+*.ps1
+
+# 실습 중 나온 악성/위장 파일 원본
+poster.zip
+poster.jpg
+downloader.exe
+svchost.exe
+recovered_svc.exe
+simulate_infection_target.ps1
+
+# 민감정보가 남아있을 수 있는 원본 로그/설정 (마스킹 후에만 커밋)
+*.env
+*_raw.log
+*credentials*
+
+# OS/에디터 캐시
+.DS_Store
+Thumbs.db
+
+# apps/external-web, apps/internal-portal (Next.js) 빌드/의존성 산출물
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/coverage/
+**/.vercel/
+**/*.tsbuildinfo
+**/npm-debug.log*

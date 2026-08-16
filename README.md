@@ -1,11 +1,5 @@
 # 보안 사고 원인 분석 및 대응 방안 도출 프로젝트
 
-현대오토에버 모빌리티 SW 스쿨 IT 보안 3기 · 1팀
-
-## 팀원
-
-서윤호 (PM) · 김태훈 · 김민성 · 정유정 · 하준수 · 홍석현
-
 ## 프로젝트 개요
 
 DMZ 웹 서버의 실제 취약점(React2Shell, CVE-2025-55182)을 직접 재현해 침투 → 내부 DB 변조 → 사용자 PC 감염 → WinRM 기반 내부 확산 → 랜섬웨어 실행까지 이어지는 침해 시나리오를 구축하고, Wazuh/Sysmon/Coraza WAF 로그를 기반으로 침해사고를 분석·대응한 프로젝트입니다.
@@ -31,6 +25,12 @@ DMZ 웹 서버의 실제 취약점(React2Shell, CVE-2025-55182)을 직접 재현
 
 > `apps/` 안의 코드는 원본 팀 저장소(`dfir-lab-project/external-web`, `dfir-lab-project/internal-portal`)의 스냅샷입니다. 커밋 히스토리는 포함하지 않았고, 최신 코드 상태만 들어있습니다.
 
+## 기술 스택
+
+**애플리케이션**: Next.js 15 · React 19 · TypeScript · MongoDB · Prisma · JWT 인증(jsonwebtoken, bcryptjs)
+
+**보안 인프라**: pfSense (방화벽/라우팅) · Suricata (IDS/IPS) · Coraza WAF · Wazuh (SIEM) · Sysmon
+
 ## 전체 흐름 한눈에 보기
 
 ![전체 공격 흐름도](docs/02-attack-scenario/images/attack-flow-diagram.png)
@@ -39,9 +39,7 @@ DMZ Web RCE 실행 → DB 접속 정보 조회 → 내부 포털 게시글·첨�
 
 ## 결과물
 
-- 침해사고 분석 보고서 (20~30페이지, [docs/03-incident-report](docs/03-incident-report/))
-- 발표 PPT ([slides](slides/))
-- 시연 영상: _(링크 추가 예정)_
+- 침해사고 분석 보고서 ([docs/03-incident-report](docs/03-incident-report/))
 
 ## 자체 평가
 
